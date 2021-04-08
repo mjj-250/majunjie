@@ -1,0 +1,72 @@
+header ul li:nth-child(1) a{
+	background-color: rgb(238, 97, 175,0.5);
+	color: rgb(238, 97, 175);
+}
+
+#outer{
+	width: 540px;
+	height: 389px;
+	margin: 50px auto;
+	float:right;
+	right: 10%;
+	padding: 10px 0px;
+	overflow: hidden;
+	position: relative;
+	background-color: palevioletred;
+	border-radius: 1rem;
+ }
+ #imgList{
+	height: 389px;
+	width: 3800px;
+	list-style: none;
+	position: absolute;
+	left: px;
+ }
+ main{
+	 overflow: hidden;
+ }
+ main div ul li{
+	float: left;
+	margin:0px 10px 10px;
+ }
+ main div ul li img{
+	border-radius: 1rem;
+ }
+ main div{
+	border: palevioletred 1rem;
+ }
+ #navDiv{
+	 bottom: 15px;
+	position: absolute;
+	
+ }
+ #navDiv a{
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: coral;
+	float: left;
+	margin: 0 5px;
+	opacity: 0.5;
+	filter: alpha(opacity=50%); /*兼容IE8*/
+ }
+ #navDiv a:hover{
+	 background-color: black;
+ }
+ #disable{
+	display: none;
+ }
+
+main span{
+	font-size: 4rem;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-weight: bolder;
+   color: rgb(235, 135, 235);
+}
+main p{
+	font-size: 6rem;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-weight: bolder;
+   color: rgb(235, 135, 235);
+}
+

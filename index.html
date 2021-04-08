@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>马俊杰的首页</title>
+  <link rel="stylesheet" href="./css/very.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <div>
+    <header>
+      <nav>
+        <ul>
+          <li> <a href="#">我的首页</a></li>
+          <li> <a href="./first.html">作业细节</a> </li>
+          <li> <a href="./second.html">课堂笔记</a></li>
+          <li> <a href="./login.html">我的尝试</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside>
+        <img src="./img/自我肖像.jpg" alt="靓仔">
+        <span>网络1901马俊杰</span><br>
+        <span>201908050133</span><br>
+        <span>职务：班长</span>
+    </aside>
+
+    <main>
+      <span>我的简单介绍：优秀</span>
+      <div id="outer">
+        <ul id="imgList">
+          <li><img src="img/first.jpg" width="520px"></li>
+          <li><img src="img/third.jpg" width="520px"></li>
+          <li><img src="img/forth.jpg" width="520px"></li>
+          <li><img src="img/fifth.jpg" width="520px"></li>
+          <li><img src="img/second.jpg" width="520px"></li>
+          <li><img src="img/1.jpg" width="520px" id="disable"></li>
+        </ul>
+        <div id="navDiv">
+          <a href="javascript:;"></a>
+          <a href="javascript:;"></a>
+          <a href="javascript:;"></a>
+          <a href="javascript:;"></a>
+          <a href="javascript:;"></a>
+        </div>
+      </div>
+      <br><br><br><br><br><br><br><br><br><br>
+      <p>然后帅气又单身</p>
+    </main>
+
+    <footer>
+    </footer>
+
+  </div>
+  <script>
+    window.onload = function () {
+      var imgList = document.getElementById("imgList");
+      var imgArr = document.getElementsByTagName("img");
+      var outer = document.getElementById("outer");
+      var navDiv = document.getElementById("navDiv");
+      var aAll = document.getElementsByTagName("a");
+      var flag = 0;
+      let index = 4;
+      aAll[index].style.backgroundColor = "black";
+
+      imgList.style.width = 520 * imgArr.length + "px";
+      navDiv.style.left = (outer.offsetWidth - navDiv.offsetWidth) / 2 + "px";
+
+      for (let i = 4; i < 9; i++) {
+        aAll[i].onclick = function () {
+          move(i);
+          setA(i);
+          index = i;  
+        }
+      }
+      aotoChange();
+      function setA(x) {
+        for (var i = 4; i < 9; i++) {
+          aAll[i].style.backgroundColor = "";
+        }
+        aAll[x].style.backgroundColor = "black";
+      };
+      var timer;
+      function aotoChange() {
+        time = setInterval(function () {
+          if (flag == 0) {
+            if (index == 8) { flag = 1; }
+            move(index);
+            setA(index); 
+            index++;
+          }
+          if (flag == 1) {
+            index--;
+            if (index == 4||index == 3) { flag = 0;}
+            move(index);   
+            setA(index);                    
+          }
+        }, 3000);
+
+
+      };
+      function move(i) {
+        imgList.style.left = (4 - i) * 540 + "px";
+      }
+    };
+  </script>
+</body>
+
+</html>

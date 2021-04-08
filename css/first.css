@@ -1,0 +1,11 @@
+header ul li:nth-child(2) a{
+	background-color: rgb(238, 97, 175,0.5);
+	color: rgb(238, 97, 175);
+}
+main p{
+	font-size:2rem;
+	font-weight:bolder;
+}
+main ol li{
+	font-size: 1.5rem;
+}
